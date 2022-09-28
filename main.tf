@@ -36,7 +36,7 @@ resource "google_compute_security_policy" "policy" {
         match {
             versioned_expr = "SRC_IPS_V1"
             config {
-                src_ip_ranges=["134.209.82.27/32"]
+                src_ip_ranges=["X.X.X.X/32"]
             }
         }
         description = "deny for do-vpn"
@@ -138,7 +138,7 @@ module "gce-lb-https" {
   url_map           = google_compute_url_map.lb_url_map.self_link
   create_url_map    = false
   ssl               = true
-  managed_ssl_certificate_domains = ["emrekaankocoglu.com"]
+  managed_ssl_certificate_domains = ["example.com"]
 
   backends = {
     default = {
