@@ -1,0 +1,14 @@
+plugin: gcp_compute
+projects:
+- {CHANGE_ME}
+auth_kind: serviceaccount
+service_account_file: ./gcloud-auth.json
+keyed_groups:
+- key: labels
+groups:
+  group1 : "'l7loadbalancer-network-group1' in name"
+  group2 : "'l7loadbalancer-network-group2' in name"
+hostnames:
+  - name
+compose:
+  ansible_host: name
