@@ -1,6 +1,6 @@
 plugin: gcp_compute
 projects:
-- {CHANGE_ME}
+- change_me
 auth_kind: serviceaccount
 service_account_file: ./gcloud-auth.json
 keyed_groups:
