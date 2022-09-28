@@ -37,3 +37,11 @@ variable "network_name" {
 variable "project" {
   type = string
 }
+
+variable "block_source_ranges" {
+  type = list
+}
+
+variable "domain_names" {
+  type = list
+}

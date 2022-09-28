@@ -16,7 +16,7 @@
 
 provider "google" {
   project = var.project
-  credentials = file("./root/gcloud-auth.json")
+  credentials = file("./gcloud-auth.json")
 }
 
 provider "google-beta" {
@@ -36,7 +36,7 @@ resource "google_compute_security_policy" "policy" {
         match {
             versioned_expr = "SRC_IPS_V1"
             config {
-                src_ip_ranges=["X.X.X.X/32"]
+                src_ip_ranges=var.block_source_ranges
             }
         }
         description = "deny for do-vpn"
@@ -138,7 +138,7 @@ module "gce-lb-https" {
   url_map           = google_compute_url_map.lb_url_map.self_link
   create_url_map    = false
   ssl               = true
-  managed_ssl_certificate_domains = ["example.com"]
+  managed_ssl_certificate_domains = var.domain_names
 
   backends = {
     default = {
