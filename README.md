@@ -36,10 +36,10 @@ The output should be in form:
   .
   .
   .
+```
 
 
-
-  # HTTPS Content-Based Load Balancer Example
+# HTTPS Content-Based Load Balancer Example
 
 [![button](http://gstatic.com/cloudssh/images/open-btn.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/GoogleCloudPlatform/terraform-google-lb-http&working_dir=examples/multi-backend-multi-mig-bucket-https-lb&page=shell&tutorial=README.md)
 
