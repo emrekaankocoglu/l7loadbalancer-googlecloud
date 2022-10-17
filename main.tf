@@ -1,4 +1,13 @@
 /**
+ * Modifications:(@emrekaankocoglu)
+ * - auth with service account is added
+ * - custom security policy added
+ * - iap firewall rule added for Ansible access
+ * - managed-domain certs is used instead of self-signed for TLS
+ * - slightly changed the groups to fit the needs
+*/
+
+/**
  * Copyright 2017 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
